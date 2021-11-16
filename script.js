@@ -1,21 +1,23 @@
+const inputEl = document.getElementById("text-input");
+const resultEl = document.getElementById("result-msg");
+const buttonEl = document.getElementById("check-btn");
+let wordToCheck = "";
+let result = "";
+
+buttonEl.addEventListener("click", function () {
+  palindrome(inputEl.value);
+});
+
 function palindrome(str) {
-  let alphanumeric = str.match(/[a-zA-Z0-9]+/g); // match only alphanumeric characters
+  const alphanumeric = str.match(/[a-zA-Z0-9]+/g);
   if (alphanumeric === null) {
-    return true; // if after this match nothing remains (there were no alphanumeric characters inside the given string), we are left with a null, which we treat as being a palindrome of itself
+    result = `let's say that nothingness is a palindrome`;
   } else {
-    let firstWord = alphanumeric
-      .join("") // we join everthing together
-      .toLowerCase(); // and convert to lower case
-
-    let secondWord = firstWord
-      .split("") // we split again to individual letters
-      .reverse() // reverse the string letter by letter
-      .join(""); // join it together again
-
+    const firstWord = alphanumeric.join("").toLowerCase();
+    const secondWord = firstWord.split("").reverse().join("");
     if (firstWord === secondWord) {
-      return true;
-    } else return false;
+      result = `${str} is a palindrome`;
+    } else result = `${str} is not a palindrome`;
   }
+  resultEl.textContent = result;
 }
-
-function palindromeCheck() {}

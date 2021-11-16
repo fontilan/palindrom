@@ -5,22 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- <style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-    </style> -->
-    <script src="script.js"></script>
+    </style>
+
     <title>Palindrome Checker</title>
   </head>
   <body>
     <section>
       <h1>Palindrome Checker</h1>
-      <h2>Description</h2>
-      <form action="">
-        <label for="word-to-check">Palindrome:</label><br />
-        <input type="text" name="word-to-check" id="word-to-check" />
-      </form>
-      <button id="check-btn" onclick="palindromeCheck()">CHECK</button>
-      <h3 id="result-msg">Result</h3>
+      <p id="description">(only alphanumeric characters)</p>
+      <input type="text" name="text-input" id="text-input" />
+      <br />
+      <button id="check-btn">CHECK</button>
+      <p id="result-msg"></p>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
