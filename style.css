@@ -8,14 +8,14 @@
 
 html {
    background-image: var(--gradient-7);
-   font-family: var(--font-sans);
-   display: grid;
    height: 100%;
+   display: grid;
    place-items: center;
+   font-family: var(--font-sans);
+   font-size: var(--font-size-4);
 }
 
 section {
-   margin-top: var(--size-2);
    padding: var(--size-5);
    background: var(--gray-1);
    border-radius: var(--radius-2);
